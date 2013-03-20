@@ -37,7 +37,7 @@ import org.jboss.logging.Logger;
  * @author <a href="mailto:scott.stark@jboss.org">Scott Stark</a>
  * @author <a href="mailto:jesper.pedersen@jboss.org">Jesper Pedersen</a>
  */
-public class MailActivation implements Comparable, Work
+public class MailActivation implements Comparable, Work, Cloneable
 {
    /** The logger */
    private static final Logger log = Logger.getLogger(MailActivation.class);
@@ -126,6 +126,13 @@ public class MailActivation implements Comparable, Work
       released = true;
 
       log.tracef("released");
+   }
+   
+   public MailActivation clone()
+   {
+      MailActivation ma = this;
+      ma.released = false;
+      return ma;
    }
 
    /**

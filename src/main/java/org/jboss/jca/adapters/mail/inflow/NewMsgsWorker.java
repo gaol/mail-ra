@@ -163,7 +163,7 @@ public class NewMsgsWorker implements Work, WorkListener
       MailActivation activation = (MailActivation) e.getWork();
       try
       {
-         watch(activation);
+         watch(activation.clone());
       }
       catch (InterruptedException ex)
       {
