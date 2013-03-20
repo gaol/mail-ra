@@ -68,16 +68,16 @@ public class MailActivationSpec implements ActivationSpec, Serializable
    private Integer maxMessages = Integer.valueOf(1);
 
    /** Enable JavaMail debugging*/
-   private Boolean debug;
+   private Boolean debug = Boolean.FALSE;
 
    /** Flush - for pop3 flush the mailbox after checking */
    private Boolean flush = Boolean.TRUE;
 
    /** Starttls - ssl */
-   private Boolean starttls;
+   private Boolean starttls = Boolean.FALSE;
 
    /** The port */
-   private Integer port;
+   private Integer port = Integer.valueOf(0);
 
    /**
     * Constructor
